@@ -1,0 +1,75 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.15" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title> Easier Usage of attr_accessible &middot; Florent Guilleux </title>
+
+  
+  <link rel="stylesheet" href="http://www.florentguilleux.frcss/poole.css">
+  <link rel="stylesheet" href="http://www.florentguilleux.frcss/syntax.css">
+  <link rel="stylesheet" href="http://www.florentguilleux.frcss/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Florent Guilleux" />
+</head>
+
+	<body class="">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://www.florentguilleux.fr"><h1>Florent Guilleux</h1></a>
+      <p class="lead">
+       Software engineer currently working with Ruby and Rails. 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Home</a> </li>
+      
+        <li><a href="mailto:contact@florentguilleux.fr"> Email </a></li>
+      
+        <li><a href="https://github.com/Florent2"> GitHub </a></li>
+      
+        <li><a href="https://speakerdeck.com/florent2"> Speaker Deck </a></li>
+      
+        <li><a href="http://stackoverflow.com/users/117704/florent2"> stackoverflow </a></li>
+      
+    </ul>
+
+    <p>&copy; 2016. All rights reserved. </p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>Easier Usage of attr_accessible</h1>
+			  <span class="post-date">Tue, Feb 21, 2012</span>
+			      <p><a href="http://guides.rubyonrails.org/security.html#mass-assignment"><code>attr_accessible</code> is the recommended method</a> to protect your attributes from mass assignments in Rails. It lists for a model the attributes that can be mass assigned, other attributes will be protected. But it is tedious to build and update this list of accessible attributes while developing an application.</p>
+
+<p>Fortunately there are two mechanisms which facilitate the usage of <code>attr_accessible</code>.</p>
+
+<p>First you can configure your application to create an empty whitelist of attributes available for mass-assignment for all the models. This forces you to explicitly list the accessible attributes of each model, without the risk of forgetting a model or an attribute. To do this just add <code>config.active_record.whitelist_attributes = true</code> in the configuration <code>application.rb</code>.</p>
+
+<p>When a protected attribute is mass assigned, the attribute value is not modified and by default Rails logs a warning. This makes sometimes hard to realize that some attribute isn’t set or modified through a create or update action because it is protected. Since the version 3.2 it is possible to have an exception raised when a protected attribute is mass assigned. Thus it is much easier to detect attributes that should be made accessible. For that just add <code>config.active_record.mass_assignment_sanitizer = :strict</code> to your application configuration, or only in <code>development.rb</code> and <code>test.rb</code> if your prefer.</p>
+
+<p>By combining those two mechanisms it is easy to discover progressively the attributes you want to make accessible while developing your application.</p>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>

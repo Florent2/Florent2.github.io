@@ -1,0 +1,90 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.15" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title> A Single Task to Migrate, Redo Migration, Prepare Test Db and Annotate &middot; Florent Guilleux </title>
+
+  
+  <link rel="stylesheet" href="http://www.florentguilleux.frcss/poole.css">
+  <link rel="stylesheet" href="http://www.florentguilleux.frcss/syntax.css">
+  <link rel="stylesheet" href="http://www.florentguilleux.frcss/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Florent Guilleux" />
+</head>
+
+	<body class="">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://www.florentguilleux.fr"><h1>Florent Guilleux</h1></a>
+      <p class="lead">
+       Software engineer currently working with Ruby and Rails. 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Home</a> </li>
+      
+        <li><a href="mailto:contact@florentguilleux.fr"> Email </a></li>
+      
+        <li><a href="https://github.com/Florent2"> GitHub </a></li>
+      
+        <li><a href="https://speakerdeck.com/florent2"> Speaker Deck </a></li>
+      
+        <li><a href="http://stackoverflow.com/users/117704/florent2"> stackoverflow </a></li>
+      
+    </ul>
+
+    <p>&copy; 2016. All rights reserved. </p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>A Single Task to Migrate, Redo Migration, Prepare Test Db and Annotate</h1>
+			  <span class="post-date">Wed, Feb 9, 2011</span>
+			      <p>Hi!</p>
+
+<p>My first blog post to announce my first gem: <a href="https://github.com/Florent2/migrate-well">migrate-well</a>. It’s a very simple one, it adds a rake task <code>db:migrate:well</code> that runs the tasks <code>db:migrate</code>, <code>db:migrate:redo</code>, <code>rake db:test:prepare</code> and <code>annotate</code>. I was tired to type all those commands each time…</p>
+
+<p>To install: add <code>gem “migrate-well”</code> in your Gemfile and run <code>bundle install</code>.</p>
+
+<p>To run: <code>rake db:migrate:well</code></p>
+
+<p>Options (updated February 15, 2011):</p>
+
+<ul>
+<li><code>redo=false</code>: don’t run the <code>db:migrate:redo</code> task</li>
+<li><code>test=false</code>: don’t run the <code>db:test:prepare</code> task</li>
+<li><code>anno=false</code>: don’t run the <code>annotate</code> command</li>
+</ul>
+
+<p>Examples:</p>
+
+<ul>
+<li>run without annotating: <code>rake db:migrate:well anno=false</code></li>
+<li>run without annotating and without redoing the migration: <code>rake db:migrate:well anno=false redo=false</code></li>
+</ul>
+
+<p>That’s all!</p>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>
