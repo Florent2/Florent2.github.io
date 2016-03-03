@@ -1,0 +1,75 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.15" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title> Avoid Work &middot; Florent Guilleux </title>
+
+  
+  <link rel="stylesheet" href="http://www.florentguilleux.fr/css/poole.css">
+  <link rel="stylesheet" href="http://www.florentguilleux.fr/css/syntax.css">
+  <link rel="stylesheet" href="http://www.florentguilleux.fr/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Florent Guilleux" />
+</head>
+
+	<body class="">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://www.florentguilleux.fr/"><h1>Florent Guilleux</h1></a>
+      <p class="lead">
+       Software engineer currently working with Ruby and Rails. 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Home</a> </li>
+      
+        <li><a href="mailto:contact@florentguilleux.fr"> Email </a></li>
+      
+        <li><a href="https://github.com/Florent2"> GitHub </a></li>
+      
+        <li><a href="https://speakerdeck.com/florent2"> Speaker Deck </a></li>
+      
+        <li><a href="http://stackoverflow.com/users/117704/florent2"> stackoverflow </a></li>
+      
+    </ul>
+
+    <p>&copy; 2016. All rights reserved. </p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>Avoid Work</h1>
+			  <span class="post-date">Wed, Mar 2, 2016</span>
+			      <p>When I receive a feature request or a bug to solve, I start thinking how I will design and implement a solution. Many developers have this tendency.</p>
+
+<p>But it is better to check first if a solution is actually needed. Sometimes there is a way to remove the problem entirely. And it may be easier than implementing a solution.</p>
+
+<p>At work my current project is a complex and massive data migration. In particular the migration of a specific set of objects requires deep changes in the code to accommodate the new data format for them.</p>
+
+<p>Before I started to implement those changes, my boss suggested me to count how many of those objects would need to be migrated. What a good idea! It turned out that a only a dozen - out of thousand of records - had a content structure requiring them to migrate.</p>
+
+<p>We found an easy way to adjust their content so that they no longer had to migrate. Thus I no longer had to change the code to deal with the migration of this set of objects. Big problem solved just by removing it :)</p>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>

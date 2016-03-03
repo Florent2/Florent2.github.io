@@ -6,8 +6,26 @@
     <description>Recent content in Posts on Florent Guilleux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Dec 2014 01:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 02 Mar 2016 23:34:26 +0100</lastBuildDate>
     <atom:link href="http://www.florentguilleux.fr/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Avoid Work</title>
+      <link>http://www.florentguilleux.fr/posts/avoid-work/</link>
+      <pubDate>Wed, 02 Mar 2016 23:34:26 +0100</pubDate>
+      
+      <guid>http://www.florentguilleux.fr/posts/avoid-work/</guid>
+      <description>&lt;p&gt;When I receive a feature request or a bug to solve, I start thinking how I will design and implement a solution. Many developers have this tendency.&lt;/p&gt;
+
+&lt;p&gt;But it is better to check first if a solution is actually needed. Sometimes there is a way to remove the problem entirely. And it may be easier than implementing a solution.&lt;/p&gt;
+
+&lt;p&gt;At work my current project is a complex and massive data migration. In particular the migration of a specific set of objects requires deep changes in the code to accommodate the new data format for them.&lt;/p&gt;
+
+&lt;p&gt;Before I started to implement those changes, my boss suggested me to count how many of those objects would need to be migrated. What a good idea! It turned out that a only a dozen - out of thousand of records - had a content structure requiring them to migrate.&lt;/p&gt;
+
+&lt;p&gt;We found an easy way to adjust their content so that they no longer had to migrate. Thus I no longer had to change the code to deal with the migration of this set of objects. Big problem solved just by removing it :)&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Elasticsearch</title>
